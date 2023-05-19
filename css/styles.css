@@ -100,11 +100,11 @@ img {
   transition: color var(--transition-dur-and-func);
 }
 
-.menu-link::after {
+.menu-link-studio::after {
   display: block;
   content:'';
   position: absolute;
-  width: 0;
+  width: 100%;
   height: 4px;
   bottom: -1px;
   background-color: #404BBF;
@@ -112,6 +112,17 @@ img {
   transition: width var(--transition-dur-and-func);
 }
 
+.menu-link-portfolio::after {
+  display: block;
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -1px;
+  background-color: #404BBF;
+  border-radius: 2px; 
+  transition: width var(--transition-dur-and-func);
+}
 
 
 .menu {
@@ -129,18 +140,16 @@ img {
   gap: 40px; 
 }
 
-.menu-link-studio:hover,
-.menu-link-studio:focus {
+.menu-link:hover,
+.menu-link:focus {
   color: #404bbf;
 }
 
-.menu-link-studio:hover.menu-link::after,
-.menu-link-studio:focus.menu-link::after {
-  width: 100%;
+.menu-link-studio {
+  color: #404bbf;
 } 
 
-.menu-link-portfolio:hover,
-.menu-link-portfolio:focus {
+.menu-link-portfolio {
   color: #404bbf;
 }
 
@@ -657,7 +666,7 @@ flex-basis: calc(100%-24px*2)/3;
   height: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  transition: background-color var(--transition-dur-and-func);
+  transition: background-color var(--transition-dur-and-func), border var(--transition-dur-and-func);
 }
 
 .close-modal-button-icon {
